@@ -9,6 +9,8 @@ next-env.d.ts
 
 # Payload default media upload directory
 public/media/
+payload.db
+payload.db-*
 
 public/robots.txt
 public/sitemap*.xml

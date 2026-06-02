@@ -1,0 +1,12 @@
+.env
+.next
+node_modules
+npm-debug.log*
+Dockerfile
+docker-compose.yml
+.git
+.DS_Store
+public/media
+test-results
+playwright-report
+blob-report
