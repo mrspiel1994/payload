@@ -7,7 +7,7 @@ services:
       postgres:
         condition: service_healthy
     environment:
-      DATABASE_URL: postgres://payload:payload@postgres:5432/payload
+      DATABASE_URL: postgres://payload:${POSTGRES_PASSWORD}@postgres:5432/payload
       PAYLOAD_SECRET: ${PAYLOAD_SECRET}
       PAYLOAD_DB_PUSH: ${PAYLOAD_DB_PUSH:-false}
       NEXT_PUBLIC_SERVER_URL: ${NEXT_PUBLIC_SERVER_URL:-http://localhost:3000}
@@ -23,7 +23,7 @@ services:
     environment:
       POSTGRES_DB: payload
       POSTGRES_USER: payload
-      POSTGRES_PASSWORD: payload
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     volumes:
       - payload_postgres:/var/lib/postgresql/data
     healthcheck:
